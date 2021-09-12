@@ -29,69 +29,69 @@ if __name__ == "__main__":
                         callback=checkpoint_callback)
             model.save("Model_DQN")
 
-        # elif i == 1:
-        #   model = TRPO(MlpPolicy, env, verbose=1)
-        #   model.learn(total_timesteps=1000)
-        #   model.save("trpo_balance")
+        elif i == 1:
+          model = TRPO(MlpPolicy, env, verbose=1)
+          model.learn(total_timesteps=1000)
+          model.save("trpo_balance")
 
-        #   model = TRPO.load("trpo_balance")
+          model = TRPO.load("trpo_balance")
 
-        #   obs = env.reset()
-        #   while True:
-        #       action, _states = model.predict(obs)
-        #       obs, rewards, dones, info = env.step(action)
+          obs = env.reset()
+          while True:
+              action, _states = model.predict(obs)
+              obs, rewards, dones, info = env.step(action)
 
-        # elif i == 1:
-        #   print("A2C")
-        #   model = A2C(MlpPolicy, env, verbose=1)
-        #   model.learn(total_timesteps=1000)   # 25000
-        #   model.save("a2c_balance")
+        elif i == 1:
+          print("A2C")
+          model = A2C(MlpPolicy, env, verbose=1)
+          model.learn(total_timesteps=1000)   # 25000
+          model.save("a2c_balance")
 
-        #   model = A2C.load("a2c_balance")
+          model = A2C.load("a2c_balance")
 
-        #   obs = env.reset()
-        #   while True:
-        #       action, _states = model.predict(obs)
-        #       obs, rewards, dones, info = env.step(action)
+          obs = env.reset()
+          while True:
+              action, _states = model.predict(obs)
+              obs, rewards, dones, info = env.step(action)
 
-        # elif i == 2:
-        #   print("ACER")
-        #   model = ACER(MlpPolicy, env, verbose=1)
-        #   model.learn(total_timesteps=1000)
-        #   model.save("acer_balance_bot")
+        elif i == 2:
+          print("ACER")
+          model = ACER(MlpPolicy, env, verbose=1)
+          model.learn(total_timesteps=1000)
+          model.save("acer_balance_bot")
 
-        #   model = ACER.load("acer_balance_bot")
+          model = ACER.load("acer_balance_bot")
 
-        #   obs = env.reset()
-        #   while True:
-        #       action, _states = model.predict(obs)
-        #       obs, rewards, dones, info = env.step(action)
+          obs = env.reset()
+          while True:
+              action, _states = model.predict(obs)
+              obs, rewards, dones, info = env.step(action)
 
-        # elif i == 4:
-        #   model = PPO1(MlpPolicy, env, verbose=1)
-        #   model.learn(total_timesteps=1000)
-        #   model.save("ppo1_balance_bot")
+        elif i == 4:
+          model = PPO1(MlpPolicy, env, verbose=1)
+          model.learn(total_timesteps=1000)
+          model.save("ppo1_balance_bot")
 
-        #   model = PPO1.load("ppo1_balance_bot")
+          model = PPO1.load("ppo1_balance_bot")
 
-        #   obs = env.reset()
-        #   while True:
-        #       action, _states = model.predict(obs)
-        #       obs, rewards, dones, info = env.step(action)
+          obs = env.reset()
+          while True:
+              action, _states = model.predict(obs)
+              obs, rewards, dones, info = env.step(action)
 
-        # elif i == 3:
-        #   print()
-        #   model = PPO2(MlpPolicy, env, verbose=1)
-        #   model.learn(total_timesteps=1000)
-        #   model.save("ppo2_balance_bot")
+        elif i == 3:
+          print()
+          model = PPO2(MlpPolicy, env, verbose=1)
+          model.learn(total_timesteps=1000)
+          model.save("ppo2_balance_bot")
 
-        #   model = PPO2.load("ppo2_balance_bot")
+          model = PPO2.load("ppo2_balance_bot")
 
-        #   obs = env.reset()
-        #   while True:
-        #       action, _states = model.predict(obs)
-        #       obs, rewards, dones, info = env.step(action)
-        #       env.render()
+          obs = env.reset()
+          while True:
+              action, _states = model.predict(obs)
+              obs, rewards, dones, info = env.step(action)
+              env.render()
 
 ## after looking the reward of these models I picked up the one with maximum reward and declared that as my final Model.
 
