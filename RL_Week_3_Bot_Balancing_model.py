@@ -29,17 +29,17 @@ if __name__ == "__main__":
                         callback=checkpoint_callback)
             model.save("Model_DQN")
 
-        elif i == 1:
-          model = TRPO(MlpPolicy, env, verbose=1)
-          model.learn(total_timesteps=1000)
-          model.save("trpo_balance")
+#         elif i == 1:
+#           model = TRPO(MlpPolicy, env, verbose=1)
+#           model.learn(total_timesteps=1000)
+#           model.save("trpo_balance")
 
-          model = TRPO.load("trpo_balance")
+#           model = TRPO.load("trpo_balance")
 
-          obs = env.reset()
-          while True:
-              action, _states = model.predict(obs)
-              obs, rewards, dones, info = env.step(action)
+#           obs = env.reset()
+#           while True:
+#               action, _states = model.predict(obs)
+#               obs, rewards, dones, info = env.step(action)
 
         elif i == 1:
           print("A2C")
@@ -67,19 +67,19 @@ if __name__ == "__main__":
               action, _states = model.predict(obs)
               obs, rewards, dones, info = env.step(action)
 
-        elif i == 4:
-          model = PPO1(MlpPolicy, env, verbose=1)
-          model.learn(total_timesteps=1000)
-          model.save("ppo1_balance_bot")
+#         elif i == 4:
+#           model = PPO1(MlpPolicy, env, verbose=1)
+#           model.learn(total_timesteps=1000)
+#           model.save("ppo1_balance_bot")
 
-          model = PPO1.load("ppo1_balance_bot")
+#           model = PPO1.load("ppo1_balance_bot")
 
-          obs = env.reset()
-          while True:
-              action, _states = model.predict(obs)
-              obs, rewards, dones, info = env.step(action)
+#           obs = env.reset()
+#           while True:
+#               action, _states = model.predict(obs)
+#               obs, rewards, dones, info = env.step(action)
 
-        elif i == 3:
+        elif i == 2:
           print()
           model = PPO2(MlpPolicy, env, verbose=1)
           model.learn(total_timesteps=1000)
